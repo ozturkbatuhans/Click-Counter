@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="nl"> 
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Klikteller</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+		}
+		#counter {
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	
+	<h1>Klikteller</h1>
+	<button onclick="countClicks()">Klik mij</button>
+	<p id="counter">Je hebt 0 keer geklikt.</p>
+
+	<script>
+		let clickCount = 0;
+		function countClicks() {
+			clickCount++;
+			// Burada backtick (`) kullanılıyor
+			document.getElementById('counter').textContent = `Je hebt ${clickCount} keer geklikt.`;
+		}
+	</script>
+</body>
+</html>
+
